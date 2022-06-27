@@ -1,0 +1,90 @@
+%add something here
+\documentclass[preprint]{sigplanconf}
+
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{xspace}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{courier}
+\usepackage{balance}
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{numbers=left}
+\graphicspath{{figure/}}
+
+%
+% import the customized commands
+%
+\input{kuncustom}
+
+\begin{document}
+\input{macro}
+
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+%\titlebanner{banner above paper title}        % These are ignored unless
+%\preprintfooter{short description of paper}   % 'preprint' option specified.
+
+\title{KV-Direct: High-Performance In-Memory Key-Value Store with Programmable NIC \vspace{-0.1in}}
+
+\authorinfo{Paper \#87 \vspace{-2in}}
+           {}
+           {}
+
+\def\name{KV-Direct}
+\def\fullname{Remote Direct Key-Value Access}
+\def\sysname{}
+
+\newcommand{\authornote}[1]{\raisebox{0.8ex}{$#1$}}
+\maketitle
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+
+\input{1_abstract}
+\input{3_intro}
+\input{4_background}
+\input{5_architecture}
+\input{6_implementation}
+\input{7_evaluation}
+\input{8_extensions}
+\input{9_related}
+\input{A_Conclusion}
+
+\balance
+\bibliographystyle{abbrvnat}
+\bibliography{reference}
+
+\end{document}
